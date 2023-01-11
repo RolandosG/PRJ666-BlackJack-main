@@ -57,9 +57,9 @@ app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", authenticateUser, jobsRoutes);
 
 //DEPLOY: only when ready to deploy
-// app.get("*", function (request, response) {
-//   response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-// });
+ app.get("*", function (request, response) {
+   response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+ });
 
 //Handle error and not-found page
 app.use(notFoundMiddleware);
