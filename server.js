@@ -43,7 +43,7 @@ app.use(xss());
 app.use(mongoSanitize());
 
 //Main route
-app.get("/", (req, res) => {
+app.get("/landing", (req, res) => {
   res.json({ msg: "Welcome!" });
 });
 
