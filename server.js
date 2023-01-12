@@ -35,7 +35,7 @@ if (process.env.NODE_ENV !== "production") {
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 //DEPLOY: only when ready to deploy
-//app.use(express.static(path.resolve(__dirname, "./client/build")));
+app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 app.use(express.json());
 app.use(helmet());
@@ -43,7 +43,7 @@ app.use(xss());
 app.use(mongoSanitize());
 
 //Main route
-app.get("/landing", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ msg: "Welcome!" });
 });
 
@@ -57,9 +57,9 @@ app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", authenticateUser, jobsRoutes);
 
 //DEPLOY: only when ready to deploy
-//app.get("*", function (request, response) {
-//   response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-// });
+app.get("*", function (request, response) {
+   response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+ });
 
 //Handle error and not-found page
 app.use(notFoundMiddleware);
