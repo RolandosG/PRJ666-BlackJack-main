@@ -192,7 +192,7 @@ function Register() {
             {displayVerification ? "Register" : "Send verification code"}
           </button>
         )}
-
+        <p>Use following user data.<br></br>To by pass registration.<br></br>User name : rolo@rolo.com<br></br> Password : rolorolo</p>
         <p>
           {values.isMember ? "Not a member yet?" : "Already a member?"}
           <button
