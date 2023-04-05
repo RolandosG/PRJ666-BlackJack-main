@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lmndang/PRJ666-Black-Jack.git"
+    "url": "git+ https://github.com/RolandosG/PRJ666-BlackJack-main.git"
   },
   "author": "Rolandos Georgoulis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lmndang/PRJ666-Black-Jack/issues"
+    "url": "https://github.com/RolandosG/PRJ666-BlackJack-main"
   },
-  "homepage": "https://github.com/lmndang/PRJ666-Black-Jack#readme",
+  "homepage": " https://github.com/RolandosG/PRJ666-BlackJack-main",
   "devDependencies": {
     "concurrently": "^7.2.1",
     "nodemon": "^2.0.16"
